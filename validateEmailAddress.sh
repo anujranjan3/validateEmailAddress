@@ -1,3 +1,13 @@
 #!/bin/bash -x
 
-echo "Welcome to Email Address validation program"
+read -p "Enter Email Id : " email;
+
+emailPattern="^[0-9a-zA-Z]"
+
+if [[ $email =~ $emailPattern ]]
+then
+	echo $email" is valid";
+else
+	echo $email" is invalid"
+fi
+
